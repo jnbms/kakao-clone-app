@@ -1,15 +1,21 @@
 import React from "react"
-import { View, Text, Button, StyleSheet, Image } from "react-native"
+import { View, Text, Button, StyleSheet, Image, Dimensions, SafeAreaView, StatusBar } from "react-native"
 import { EvilIcons, MaterialCommunityIcons, Ionicons, Feather } from '@expo/vector-icons'
 import kakaoLogo from '../assets/kakao-logo.png'
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { Chat, More, People, Search } from "../bottom-tab/bottom-tab"
 
 const styles = StyleSheet.create({
+    safeAreaView: {
+        flex: 1,
+        marginTop:StatusBar.currentHeight,
+        backgroundColor: 'white'
+    },
     view: {
         backgroundColor: 'white',
-        height: '100%',
-        display: 'flex',
+        // height: '80%',
+        // display: 'flex',
+        flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -42,9 +48,11 @@ const styles = StyleSheet.create({
         borderRadius: 100
     },
     bottomTab: {
-        width: 400,
+        width: Dimensions.get('window').width,
         // borderWidth: 1,
-        color: 'red'
+        color: 'red',
+        // margin: 0,
+        // padding: 0
     }
 })
 
@@ -53,25 +61,22 @@ const Tab = createBottomTabNavigator()
 
 function BottomTab() {
     return (
-        <Tab.Navigator screenOptions={{tabBarStyle: styles.bottomTab}}>
+        <Tab.Navigator screenOptions={{tabBarStyle: styles.bottomTab, headerShown: false, tabBarShowLabel: false}} initialRouteName="Chat">
             <Tab.Screen name="People" component={People} options={{tabBarIcon: () => <Ionicons name="person-outline" size={24} color="black" />}}/>
             <Tab.Screen name="Chat" component={Chat} options={{tabBarIcon: () => <Ionicons name="chatbubble" size={24} color="black" />}}/>
             <Tab.Screen name="Search" component={Search} options={{tabBarIcon: () => <Ionicons name="search-outline" size={24} color="black" />}}/>
             <Tab.Screen name="More" component={More} options={{tabBarIcon: () => <Feather name="more-horizontal" size={24} color="black" />}}/>
-            {/* <Tab.Screen name="Search" component={Search}/> */}
-            {/* <Tab.Screen name="More" component={More}/> */}
         </Tab.Navigator>
     )
 }
 
-
-
 export default function Main({navigation}) {
     return (
-        <View style={styles.view}>
-            <BottomTab/>
-
-        </View>
+        <SafeAreaView style={styles.safeAreaView}>
+            <View style={styles.view}>
+                <BottomTab/>
+            </View>
+        </SafeAreaView>
     )
 }
 
