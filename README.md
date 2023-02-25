@@ -15,7 +15,8 @@
                 - people
                 - search
                 - more
-    - data
+        - data
+            - 
 - 추가사항
     - styled-componets 적용하기
     - flatlist 컴포넌트 사용하기[적용 완료]
@@ -38,3 +39,4 @@
 - 추가할 사항
     - 테마설정(primary 컬러: black, secondary 컬러: gray)
     - navigator 폴더가 필요할 지 폴더 구조 고려해보기
+    - useNavigation으로 props로 전달받는 과정 제거
