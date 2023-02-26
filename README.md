@@ -38,5 +38,16 @@
 
 - 추가할 사항
     - 테마설정(primary 컬러: black, secondary 컬러: gray)
-    - navigator 폴더가 필요할 지 폴더 구조 고려해보기
+    - navigator[routes] 폴더가 필요할 지 폴더 구조 고려해보기
     - useNavigation으로 props로 전달받는 과정 제거
+
+- 2월 26일
+    - useNavigation 적용
+    - route 폴더 생성
+    - 불필요한 stylesheet 정리
+    - data 폴더에서 chatings 목록 표시
+    - 스타일링 관련 방법은 다양한 경우의 수가 있어서 styleSheet로 구분하는 것으로 일단 제작 완료
+
+
+- 추가 사항
+    - alias 기능 추가하기

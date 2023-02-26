@@ -6,12 +6,10 @@ const Stack = createNativeStackNavigator()
 const BasicTheme = {
   ...DefaultTheme,
   colors: {
-    // primary: 'rgb(255, 45, 85)',
+    primary: 'rgb(0, 0, 0)',
+    secondary: 'rgb(160, 160, 160)',
+    notification: 'rgb(255, 0, 0)',
     background: 'rgb(255, 255, 255)',
-    card: 'rgb(255, 255, 255)',
-    text: 'rgb(28, 28, 30)',
-    // border: 'rgb(199, 199, 204)',
-    // notification: 'rgb(255, 69, 58)',
   }
 }
 export default function App() {
