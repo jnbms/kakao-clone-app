@@ -34,26 +34,24 @@ const styles = StyleSheet.create({
     },
     alert: {
         backgroundColor: '#e54c00',
-        display: 'flex',
-        alignItems: 'center',   
-        justifyContent: 'center',
         textAlign: 'center',
+        textAlignVertical: 'center',
         height: 24,
         width: 24,
         color: 'white',
-        borderRadius: 100,
+        overflow: "hidden",
+        borderRadius: 12,
         marginTop: 4
     },
     bottomTab: {
-        borderWidth: 1,
-        color: 'red'
+        // borderWidth: 1,
     },
     iconContainer: {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-around',
-        width: 200
+        width: 150
     },
     subTitle: {fontWeight: 'bold', fontSize: 16},
     flatlist: {flexGrow: 0},

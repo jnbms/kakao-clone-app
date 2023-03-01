@@ -17,10 +17,10 @@ function Chat() {
             <View style={styles.header}>
                 <Text style={styles.title} onPress={() => navigation.navigate('Home')} >Chats</Text>
                 <View style={styles.iconContainer}>
-                    <EvilIcons name="search" size={32} color="black" />
-                    <MaterialCommunityIcons name="chat-plus-outline" size={32} color="black" />
-                    <Ionicons name="musical-notes-outline" size={32} color="black" />
-                    <Ionicons name="md-settings-outline" size={32} color="black" />
+                    <EvilIcons name="search" size={28} color="black" />
+                    <MaterialCommunityIcons name="chat-plus-outline" size={28} color="black" />
+                    <Ionicons name="musical-notes-outline" size={28} color="black" />
+                    <Ionicons name="md-settings-outline" size={28} color="black" />
                 </View>
             </View>
             <FlatList

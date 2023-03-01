@@ -1,40 +1,39 @@
-import { StyleSheet } from "react-native"
+import { Dimensions, StyleSheet } from "react-native"
+
+const deviceWidth = Dimensions.get('window').width
+const deviceHeight = Dimensions.get('window').height
 
 const styles = StyleSheet.create({
     view: {
-        display: 'flex',
-        flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: 'white',
-        height: '100%',
     },
     title: {
         fontSize: 24,
-        margin: 24,
-        marginTop: 100,
-        columnGap: 100,
+        marginBottom: 24,
+        marginTop: deviceHeight * 0.1,
     },
     subTitle: {
         color: 'gray'
     },
     inp: {
+        borderBottomColor: 'lightgray',
         fontSize: 16,
         height: 48,
+        // flex: 0.17,
         borderBottomWidth: 1,
-        width: 360,
-        borderBottomColor: 'lightgray',
+        width: deviceWidth * 0.9,
     },
     button: {
         backgroundColor: '#F6F6F6',
+        width: deviceWidth * 0.9,
         paddingVertical: 12,
-        width: 360,
         alignItems: 'center',
         borderRadius: 4,
         margin: 4,
     },
 
     comment: {
-        marginTop: 12
+        // marginTop: 12
     }
 })
 export default styles

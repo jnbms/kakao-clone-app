@@ -29,7 +29,8 @@ const styles = StyleSheet.create({
         height: 24,
         width: 24,
         color: 'white',
-        borderRadius: 100
+        overflow: "hidden",
+        borderRadius: "100%"
     },
     bottomTab: {
         width: Dimensions.get('window').width,
