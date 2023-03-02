@@ -51,3 +51,6 @@
 
 - 추가 사항
     - alias 기능 추가하기
+    - stled-components가 아닌 적당한 스타일링 방법에 대해서 생각해보기
+    - headless 또는 compound 패턴과 atomic design 등에 대해서 고려
+    - 아키텍처 패턴 고려해보기
